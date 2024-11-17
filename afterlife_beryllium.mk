@@ -7,13 +7,18 @@
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
-# Sakura Flags
-SAKURA_MAINTAINER := Rve
-SAKURA_BUILD_TYPE := vanilla
-
+# afterlife official flags
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+AFTERLIFE_MAINTAINER := Rve
+
+# Offline Charging
+USE_PIXEL_CHARGING := true
+
+# disable/enable blur support, default is false
+TARGET_SUPPORTS_BLUR := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_beryllium
